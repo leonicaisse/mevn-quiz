@@ -3,7 +3,7 @@ version: "3"
 services:
   client:
     container_name: client
-    image: node
+    image: node:16.9.1-alpine3.14
     command: bash -c "npm i && npm run serve"
     expose:
       - "80"
@@ -18,7 +18,7 @@ services:
 
   server:
     container_name: server
-    image: node
+    image: node:16.9.1-alpine3.14
     command: bash -c "npm i && npm run dev"
     expose:
       - "8000"
@@ -28,3 +28,12 @@ services:
     volumes:
       - ./server:/usr/src/app
     working_dir: /usr/src/app
+
+  database:
+    container_name: database
+    image: mongo
+    volumes:
+      - ./database:/data/db
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
