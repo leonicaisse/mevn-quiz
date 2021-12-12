@@ -3,5 +3,5 @@
 .DS_Store
 
 # MongoDB
-./database/diagnostic.data
-./database/journal
+./database/diagnostic.data/*
+./database/journal/*
