@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  client:
+    container_name: client
+    image: node
+    command: bash -c "npm i && npm run serve"
+    expose:
+      - "80"
+    ports:
+      - "80:8080"
+    environment:
+      HOST: 0.0.0.0
+    user: node
+    volumes:
+      - ./client:/usr/src/app
+    working_dir: /usr/src/app
+
+  server:
+    container_name: server
+    image: node
+    command: bash -c "npm i && npm run dev"
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+    user: node
+    volumes:
+      - ./server:/usr/src/app
+    working_dir: /usr/src/app
