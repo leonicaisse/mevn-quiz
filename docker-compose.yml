@@ -3,7 +3,7 @@ version: "3"
 services:
   client:
     container_name: client
-    image: node:16.9.1-alpine3.14
+    image: node:16.9.1
     command: bash -c "npm i && npm run serve"
     expose:
       - "80"
@@ -18,7 +18,7 @@ services:
 
   server:
     container_name: server
-    image: node:16.9.1-alpine3.14
+    image: node:16.9.1
     command: bash -c "npm i && npm run dev"
     expose:
       - "8000"
