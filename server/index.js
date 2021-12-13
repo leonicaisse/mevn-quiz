@@ -8,7 +8,8 @@ app.use(morgan())
 app.get('/', (req, res) => {
     res.json({
         "id": 1,
-        "title": "Test"
+        "title": "Test",
+        "mdr": "non"
     });
 })
 
