@@ -6,9 +6,9 @@ services:
     image: node:16.9.1
     command: bash -c "npm i && npm run serve"
     expose:
-      - "80"
+      - "8080"
     ports:
-      - "80:8080"
+      - "8080:8080"
     environment:
       HOST: 0.0.0.0
     user: node

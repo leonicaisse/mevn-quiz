@@ -1,6 +1,9 @@
-.env
+*/.env.local
 */node_modules
 .DS_Store
+
+# IntelliJ
+.idea
 
 # MongoDB
 ./database/diagnostic.data/*
