@@ -1,10 +1,10 @@
-require('dotenv-flow').config();
 const express = require("express");
+const app = express();
+
+require('dotenv-flow').config();
 const morgan = require("morgan");
 const mongoose = require('mongoose');
 const cors = require('cors');
-const app = express();
-const port = 8000;
 
 app.use(morgan());
 app.use(cors());
@@ -20,8 +20,7 @@ db.once('open', () => console.log('Connected to Database'));
 const testRouter = require('./routes/test');
 app.use('/test', testRouter);
 
+const pages = require('./routes/pages');
+app.use('/pages', pages);
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
-
+module.exports = app;
