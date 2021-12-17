@@ -1,9 +1,9 @@
 const quizIndex = async () => {
-    // get all quiz
-    // await ......
-}
+  // get all quiz
+  // await ......
+};
 
 const getQuiz = async (id) => {
-    // get one quiz by id
-    // await ......
-}
+  // get one quiz by id
+  // await ......
+};
