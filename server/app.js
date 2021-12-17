@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require('express');
 const app = express();
 
 require('dotenv-flow').config();
-const morgan = require("morgan");
+const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
@@ -10,7 +10,7 @@ app.use(morgan());
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true});
 const db = mongoose.connection;
 
 db.on('error', (error) => console.error(error));
