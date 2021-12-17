@@ -1,1 +1,3 @@
-// Ouvre la connexion à la base de données
+const mongo = require('./mongodb/mongodb');
+
+mongo.connectDB();

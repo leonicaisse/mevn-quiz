@@ -8,12 +8,13 @@ const morgan = require("morgan");
 >>>>>>> d05f012 (fix: server/app.js)
 const cors = require('cors');
 
-const routes = require('./routes');
-
 app.use(morgan());
 app.use(cors());
 app.use(express.json());
 
+const mongo = require('./config/database');
+
+const routes = require('./routes');
 app.use('/', routes);
 <<<<<<< HEAD
 =======
