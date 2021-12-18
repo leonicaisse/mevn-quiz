@@ -8,7 +8,7 @@ app.use(morgan());
 app.use(cors());
 app.use(express.json());
 
-const mongo = require('./config/database');
+const database = require('./config/database');
 
 const routes = require('./routes');
 app.use('/', routes);
