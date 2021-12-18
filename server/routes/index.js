@@ -5,10 +5,11 @@ routes.use(bodyParser.urlencoded({ extended: true }));
 routes.use(bodyParser.json());
 
 // require routes
-const test = require('./test/test');
 const pages = require('./pages/pages');
+const quiz = require('./quiz/quiz');
 
-routes.use('/test', test);
+
 routes.use('/pages', pages);
+routes.use('/quiz', quiz);
 
 module.exports = routes;
