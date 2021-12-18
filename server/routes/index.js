@@ -1,4 +1,4 @@
-const routes = require('express').Router();
+const routes = new (require('express')).Router();
 const bodyParser = require('body-parser');
 
 routes.use(bodyParser.urlencoded({extended: true}));
