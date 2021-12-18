@@ -1,8 +1,8 @@
-const routes = require('express').Router()
+const routes = require('express').Router();
 
 const homePage = (req, res, next) => {
-    res.send('Home Page');
-}
+  res.send('Home Page');
+};
 
 routes.get('/', homePage);
 
