@@ -3,7 +3,7 @@
     "questions": [
         {
             "name": "Lorsqu'un pancake tombe dans la neige avant le 31 décembre, on dit qu'il est: ",
-            "correct_answer": [
+            "correct_answers": [
                 {
                     "name": "Une Kipa surgelée"
                 }
@@ -25,7 +25,7 @@
         },
         {
             "name": "Lorsqu'un pancake prend l'avion à destination de Toronto et qu'il fait une escale technique à St Claude, on dit: ",
-            "correct_answer": [
+            "correct_answers": [
                 {
                     "name": "Qu'est qu'il fout ce maudit pancake, tabernacle"
                 }
@@ -44,7 +44,7 @@
         },
         {
             "name": "Lorsqu'un pancake est invité à une barmitzva, les convives doivent: ",
-            "correct_answer": [
+            "correct_answers": [
                 {
                     "name": "l'inciter à boire à l'Open Barmitzva"
                 }
@@ -66,7 +66,7 @@
         },
         {
             "name": "Au cours de quel évènement historique fut crée le pancake:",
-            "correct_answer": [
+            "correct_answers": [
                 {
                     "name": "en 1702, pendant le massacre du Saint Panini"
                 }

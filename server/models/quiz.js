@@ -8,7 +8,7 @@ const quizSchema = new mongoose.Schema({
   },
   questions: [{
     name: String,
-    correct_answer: [{
+    correct_answers: [{
       name: String,
     }],
     wrong_answers: [{
