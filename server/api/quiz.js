@@ -28,10 +28,13 @@ const read = async (id) => {
 };
 
 const update = async (id, data) => {
-  // TODO: Handle deep updates (i.e. question update)
   try {
-    return await Quiz.findByIdAndUpdate(id, data, {returnDocument: 'after'});
+    return await Quiz.findByIdAndDeepUpdate(
+        id,
+        data,
+    );
   } catch (error) {
+    console.log(error);
     throw error;
   }
 };
