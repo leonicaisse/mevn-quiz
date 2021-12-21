@@ -3,7 +3,11 @@
     "questions": [
         {
             "name": "Lorsqu'un pancake tombe dans la neige avant le 31 décembre, on dit qu'il est: ",
-            "correct_answer": "C",
+            "correct_answers": [
+                {
+                    "name": "Une Kipa surgelée"
+                }
+            ],
             "answers": [
                 {
                     "name": "Tombé dans la neige avant le 31 décembre"
@@ -21,16 +25,17 @@
         },
         {
             "name": "Lorsqu'un pancake prend l'avion à destination de Toronto et qu'il fait une escale technique à St Claude, on dit: ",
-            "correct_answer": "C",
-            "answers": [
+            "correct_answers": [
+                {
+                    "name": "Qu'est qu'il fout ce maudit pancake, tabernacle"
+                }
+            ],
+            "wrong_answers": [
                 {
                     "name": "Qu'il n'est pas arrivé à Toronto"
                 },
                 {
                     "name": "Qu'il était supposé arriver à Toronto, mais qu'il est pas encore arrivé"
-                },
-                {
-                    "name": "\"Qu'est qu'il fout ce maudit pancake, tabernacle\""
                 },
                 {
                     "name": "La réponse D"
@@ -39,7 +44,11 @@
         },
         {
             "name": "Lorsqu'un pancake est invité à une barmitzva, les convives doivent: ",
-            "correct_answer": "A",
+            "correct_answers": [
+                {
+                    "name": "l'inciter à boire à l'Open Barmitzva"
+                }
+            ],
             "answers": [
                 {
                     "name": "l'inciter à boire à l'Open Barmitzva"
@@ -57,7 +66,11 @@
         },
         {
             "name": "Au cours de quel évènement historique fut crée le pancake:",
-            "correct_answer": "B",
+            "correct_answers": [
+                {
+                    "name": "en 1702, pendant le massacre du Saint Panini"
+                }
+            ],
             "answers": [
                 {
                     "name": "En 1618, pendant la guerre des croissants au beurre"
