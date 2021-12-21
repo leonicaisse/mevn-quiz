@@ -1,26 +1,74 @@
 {
-    "id": "_2091092091209",
-    "name": "Le quiz",
+    "name": "Qui veut gagner de l'argent en masse",
     "questions": [
         {
-            "id": "_09876543245678",
-            "name": "La question 1",
-            "correct_answer": "_098765678299",
+            "name": "Lorsqu'un pancake tombe dans la neige avant le 31 décembre, on dit qu'il est: ",
+            "correct_answer": "C",
             "answers": [
                 {
-                    "id": "_098765678299",
-                    "name": "La réponse A"
+                    "name": "Tombé dans la neige avant le 31 décembre"
                 },
                 {
-                    "id": "_098765678299",
-                    "name": "La réponse B"
+                    "name": "Un frizby comestible"
                 },
                 {
-                    "id": "_098765678299",
-                    "name": "La réponse C"
+                    "name": "Une Kipa surgelée"
                 },
                 {
-                    "id": "_098765678299",
+                    "name": "La réponse D"
+                }
+            ]
+        },
+        {
+            "name": "Lorsqu'un pancake prend l'avion à destination de Toronto et qu'il fait une escale technique à St Claude, on dit: ",
+            "correct_answer": "C",
+            "answers": [
+                {
+                    "name": "Qu'il n'est pas arrivé à Toronto"
+                },
+                {
+                    "name": "Qu'il était supposé arriver à Toronto, mais qu'il est pas encore arrivé"
+                },
+                {
+                    "name": "\"Qu'est qu'il fout ce maudit pancake, tabernacle\""
+                },
+                {
+                    "name": "La réponse D"
+                }
+            ]
+        },
+        {
+            "name": "Lorsqu'un pancake est invité à une barmitzva, les convives doivent: ",
+            "correct_answer": "A",
+            "answers": [
+                {
+                    "name": "l'inciter à boire à l'Open Barmitzva"
+                },
+                {
+                    "name": "Lui présenter Raymond Barmitzva"
+                },
+                {
+                    "name": "Lui offrir des Malabarmitzva"
+                },
+                {
+                    "name": "La réponse D"
+                }
+            ]
+        },
+        {
+            "name": "Au cours de quel évènement historique fut crée le pancake:",
+            "correct_answer": "B",
+            "answers": [
+                {
+                    "name": "En 1618, pendant la guerre des croissants au beurre"
+                },
+                {
+                    "name": "en 1702, pendant le massacre du Saint Panini"
+                },
+                {
+                    "name": "En 112 avant Céline Dion, pendant la prise de la brioche"
+                },
+                {
                     "name": "La réponse D"
                 }
             ]

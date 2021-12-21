@@ -1,3 +1,3 @@
-const mongo = require('./mongodb/mongodb');
+const database = require('./mongodb/mongodb');
 
-mongo.connectDB();
+database.connect();
