@@ -8,15 +8,12 @@
                     "name": "Une Kipa surgelée"
                 }
             ],
-            "answers": [
+            "wrong_answers": [
                 {
                     "name": "Tombé dans la neige avant le 31 décembre"
                 },
                 {
                     "name": "Un frizby comestible"
-                },
-                {
-                    "name": "Une Kipa surgelée"
                 },
                 {
                     "name": "La réponse D"
@@ -49,10 +46,7 @@
                     "name": "l'inciter à boire à l'Open Barmitzva"
                 }
             ],
-            "answers": [
-                {
-                    "name": "l'inciter à boire à l'Open Barmitzva"
-                },
+            "wrong_answers": [
                 {
                     "name": "Lui présenter Raymond Barmitzva"
                 },
@@ -71,12 +65,9 @@
                     "name": "en 1702, pendant le massacre du Saint Panini"
                 }
             ],
-            "answers": [
+            "wrong_answers": [
                 {
                     "name": "En 1618, pendant la guerre des croissants au beurre"
-                },
-                {
-                    "name": "en 1702, pendant le massacre du Saint Panini"
                 },
                 {
                     "name": "En 112 avant Céline Dion, pendant la prise de la brioche"
