@@ -29,10 +29,7 @@ const read = async (id) => {
 
 const update = async (id, data) => {
   try {
-    return await Quiz.findByIdAndDeepUpdate(
-        id,
-        data,
-    );
+    return await Quiz.findByIdAndUpdate(id, data, {returnDocument: 'after'});
   } catch (error) {
     console.log(error);
     throw error;
