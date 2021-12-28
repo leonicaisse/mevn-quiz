@@ -27,7 +27,7 @@ routes.post('/', async (req, res) => {
   }
 });
 
-routes.patch('/:id', async (req, res) => {
+routes.put('/:id', async (req, res) => {
   // TODO: Handle deep updates (i.e. question update)
   const {id} = req.params;
   const {data} = req.body;
