@@ -91,6 +91,11 @@ routes.get('/:id', async (req, res) => {
  *          type: string
  *        required: true
  *        description: ID of the quiz to update
+ *      - in: body
+ *        name: Request Body
+ *        description: "The new data for the quiz"
+ *        type: object
+ *        required: true
  *    tags:
  *      - quizzes
  *    reponses:
