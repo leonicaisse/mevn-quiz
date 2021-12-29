@@ -5,14 +5,19 @@ const quiz = require('../../api/quiz');
  * @swagger
  * /quiz:
  *  get:
- *    summary: Get all quizzes list
+ *    summary: Retrieve all quizzes.
+ *    description: Retrieve all quizzes.
  *    tags:
  *      - quizzes
  *    responses:
  *      200:
- *        description: All quizzes
+ *        description: All quizzes.
+ *        schema:
+ *          type: array
+ *          items:
+ *            $ref: "#/definitions/Quiz"
  *      500:
- *        description: An error has occured
+ *        description: An error has occured.
  */
 routes.get('/', async (req, res) => {
   try {
@@ -31,7 +36,11 @@ routes.get('/', async (req, res) => {
  *      - in: body
  *        name: Request Body
  *        description: "The data for the new quiz"
- *        type: object
+ *        schema:
+ *          type: object
+ *          properties:
+ *            data:
+ *              $ref: '#/definitions/Quiz'
  *        required: true
  *    tags:
  *      - quizzes
@@ -67,6 +76,8 @@ routes.post('/', async (req, res) => {
  *    responses:
  *      200:
  *        description: Requested quiz
+ *        schema:
+ *          $ref: "#/definitions/Quiz"
  *      500:
  *        description: An error has occured
  */
@@ -89,18 +100,25 @@ routes.get('/:id', async (req, res) => {
  *        name: id
  *        schema:
  *          type: string
+ *          example: "61cc741e2a17104ba34a45ae"
  *        required: true
  *        description: ID of the quiz to update
  *      - in: body
  *        name: Request Body
- *        description: "The new data for the quiz"
- *        type: object
  *        required: true
+ *        description: "The new data for the quiz"
+ *        schema:
+ *          type: object
+ *          properties:
+ *            data:
+ *              $ref: "#/definitions/Quiz"
  *    tags:
  *      - quizzes
- *    reponses:
+ *    responses:
  *      200:
  *        description: Quiz updated successfully
+ *        schema:
+ *          $ref: "#/definitions/Quiz"
  *      500:
  *        description: An error has occured
  */

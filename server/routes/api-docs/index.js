@@ -10,7 +10,7 @@ const swaggerOptions = {
       servers: [`http://localhost:${process.env.port || 8000}`],
     },
   },
-  apis: ['./routes/**/*.js'],
+  apis: ['./routes/**/*.js', './routes/**/definitions.yaml'],
 };
 
 routes

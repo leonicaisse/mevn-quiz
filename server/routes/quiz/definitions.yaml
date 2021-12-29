@@ -1,0 +1,46 @@
+definitions:
+  Quiz:
+    type: object
+    properties:
+      _id:
+        type: ObjectId
+        example: "61cc741e2a17104ba34a45ae"
+      name:
+        type: string
+        example: "Quiz name"
+      questions:
+        type: array
+        items:
+          $ref: "#/definitions/Question"
+      __v:
+        type: integer
+        example: 0
+
+  Question:
+    type: object
+    properties:
+      name:
+        type: string
+        example: "Question name"
+      correct_answers:
+        type: array
+        items:
+          $ref: "#/definitions/Answer"
+      wrong_answers:
+        type: array
+        items:
+          $ref: "#/definitions/Answer"
+      _id:
+        type: ObjectId
+        example: "61cc741e2a17104ba34a45af"
+
+  Answer:
+    type: object
+    properties:
+      name:
+        type: string
+        example: "Answer name"
+      _id:
+        type: ObjectId
+        example: "61cc741e2a17104ba34a45b0"
+      
