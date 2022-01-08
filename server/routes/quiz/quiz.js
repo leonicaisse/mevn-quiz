@@ -19,12 +19,10 @@ const quiz = require('../../api/quiz');
  *      500:
  *        description: An error has occured.
  */
-routes.get('/', async (req, res) => {
-  try {
-    res.status(200).send(await quiz.index());
-  } catch (error) {
-    res.status(500).send(error);
-  }
+routes.get('/', async (req, res, next) => {
+  quiz.index()
+      .then((response) => res.send(response))
+      .catch((err) => next(err));
 });
 
 /**
@@ -50,13 +48,13 @@ routes.get('/', async (req, res) => {
  *      500:
  *        description: An error has occured
  */
-routes.post('/', async (req, res) => {
+routes.post('/', async (req, res, next) => {
   const {data} = req.body;
-  try {
-    res.status(201).send(await quiz.create(data));
-  } catch (error) {
-    res.status(500).send(error);
-  }
+  quiz.create(data)
+      .then((response) => {
+        res.status(201).send(response);
+      })
+      .catch((err) => next(err));
 });
 
 /**
@@ -81,13 +79,14 @@ routes.post('/', async (req, res) => {
  *      500:
  *        description: An error has occured
  */
-routes.get('/:id', async (req, res) => {
+routes.get('/:id', async (req, res, next) => {
   const {id} = req.params;
-  try {
-    res.status(200).send(await quiz.read(id));
-  } catch (error) {
-    res.status(500).send(error);
-  }
+  quiz.read(id)
+      .then((response) => {
+        if (!response) throw Object.assign(new Error('Not found'), {code: 404});
+        res.status(200).send(response);
+      })
+      .catch((err) => next(err));
 });
 
 /**
@@ -122,14 +121,15 @@ routes.get('/:id', async (req, res) => {
  *      500:
  *        description: An error has occured
  */
-routes.put('/:id', async (req, res) => {
+routes.put('/:id', async (req, res, next) => {
   const {id} = req.params;
   const {data} = req.body;
-  try {
-    res.status(200).send(await quiz.update(id, data));
-  } catch (error) {
-    res.status(500).send(error);
-  }
+  quiz.update(id, data)
+      .then((response) => {
+        if (!response) throw Object.assign(new Error('Not found'), {code: 404});
+        res.status(200).send(response);
+      })
+      .catch((err) => next(err));
 });
 
 /**
@@ -152,13 +152,14 @@ routes.put('/:id', async (req, res) => {
  *      500:
  *        description: An error has occured
  */
-routes.delete('/:id', async (req, res) => {
+routes.delete('/:id', (req, res, next) => {
   const {id} = req.params;
-  try {
-    res.status(204).send(await quiz.remove(id));
-  } catch (error) {
-    res.status(500).send(error);
-  }
+  quiz.remove(id)
+      .then((response) => {
+        if (!response) throw Object.assign(new Error('Not found'), {code: 404});
+        res.status(200).send(response);
+      })
+      .catch((err) => next(err));
 });
 
 
