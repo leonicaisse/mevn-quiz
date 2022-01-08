@@ -20,11 +20,7 @@ const create = async (data) => {
 };
 
 const read = async (id) => {
-  try {
-    return await Quiz.findById(id);
-  } catch (error) {
-    throw error;
-  }
+  return await Quiz.findById(id);
 };
 
 const update = async (id, data) => {
