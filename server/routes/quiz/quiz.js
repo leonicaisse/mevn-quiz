@@ -21,7 +21,7 @@ const quiz = require('../../api/quiz');
  */
 routes.get('/', async (req, res, next) => {
   quiz.index()
-      .then((response) => res.send(response))
+      .then((response) => res.status(200).send(response))
       .catch((err) => next(err));
 });
 

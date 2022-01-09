@@ -4,7 +4,7 @@ const app = express();
 const morgan = require('morgan');
 const cors = require('cors');
 
-const errorHandler = require('./utils/errorHandler.js');
+const errorHandler = require('./utils/errorHandler');
 
 app.use(morgan());
 app.use(cors());
